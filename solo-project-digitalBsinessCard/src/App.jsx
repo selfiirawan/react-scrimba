@@ -7,8 +7,12 @@ export default function App() {
     return (
         <>
             <Info />
-            <About />
-            <Interest />
+
+            <div className='about-interest'>
+                <About />
+                <Interest />
+            </div>
+
             <Footer />
         </>
     )

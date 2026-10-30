@@ -10,12 +10,13 @@ body {
 }
 
 #root {
-    border: 1px solid white;
+    /* border: 1px solid white; */
     box-shadow: 0px 4px 4px 0px #00000040;
     border-radius: 10px;
     width: 350px;
     overflow: hidden;
     margin: 50px auto;
+    background-color: #1A1B21;
 }
 
 /* === Info === */
@@ -83,4 +84,19 @@ body {
     color: #fff;
 }
 
+/* === About and Interest === */
+.about-interest {
+    margin: 25px;
+}
 
+.about-interest h4 {
+    font-size: 1.2rem;
+    margin: 25px 0 0;
+}
+
+.about-interest p {
+    margin: 10px 0;
+    font-size: 0.9rem;
+}
+
+/* === Footer === */

@@ -2,6 +2,13 @@
 
 export default function Interest() {
     return (
-        <h1>Interest</h1>
+        <>
+            <h4>Interest</h4>
+
+            <p>
+                Programming. Dessert. Gaming. Movies. Cooking and baking.
+                Sometimes reading. Building LEGO or bricks.
+            </p>
+        </>
     )
 }
