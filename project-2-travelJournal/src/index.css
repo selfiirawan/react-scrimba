@@ -1,0 +1,24 @@
+html, body {
+    margin: 0;
+    font-family: Inter, sans-serif;
+}
+
+/* === HEADER === */
+header {
+    background-color: #F55A5A;
+    color: #fff;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+header > img {
+    width: 25px;
+}
+
+header span {
+    margin: 0;
+    font-size: 1.1rem;
+}
