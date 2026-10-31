@@ -100,3 +100,10 @@ body {
 }
 
 /* === Footer === */
+footer {
+    background-color: #161619;
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
