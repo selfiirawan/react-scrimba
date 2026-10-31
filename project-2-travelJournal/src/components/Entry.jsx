@@ -1,24 +1,19 @@
-import fuji from "../assets/fuji.png"
 import marker from "../assets/marker.png"
 
-export default function Entry() {
+export default function Entry(prop) {
     return (
         <main>
             <div className="card">
-                <img src={ fuji } alt="mount fuji" />
+                <img src={prop.img.src} alt={prop.img.alt} />
 
                 <div className="content">
                     <img className="marker" src={ marker } alt="point marker" />
-                    <span className="country">JAPAN</span>
-                    <a href="https://www.google.com/maps/place/Mount+Fuji/@35.3606421,138.7170637,15z/data=!3m1!4b1!4m6!3m5!1s0x6019629a42fdc899:0xa6a1fcc916f3a4df!8m2!3d35.3606255!4d138.7273634!16zL20vMGNrczA?entry=ttu" target="_blank">View on Google Maps</a>
+                    <span className="country">{prop.country}</span>
+                    <a href={prop.googleMapsLink} target="_blank">View on Google Maps</a>
 
-                    <h1>Mount Fuji</h1>
-                    <p className="date">12 Jan, 2021 - 24 Jan, 2021</p>
-                    <p className="description">
-                        Mount Fuji is the tallest mountain in Japan, standing at 3,776 meters (12,380 feet). 
-                        Mount Fuji is the single most popular tourist site in Japan, for both Japanese and 
-                        foreign tourists.
-                    </p>
+                    <h1>{prop.title}</h1>
+                    <p className="date">{prop.dates}</p>
+                    <p className="description">{prop.text}</p>
                 </div>
             </div>
             <hr />
