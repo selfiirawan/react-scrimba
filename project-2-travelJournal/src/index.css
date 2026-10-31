@@ -1,6 +1,8 @@
 html, body {
     margin: 0;
     font-family: Inter, sans-serif;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 /* === HEADER === */
@@ -21,4 +23,56 @@ header > img {
 header span {
     margin: 0;
     font-size: 1.1rem;
+}
+
+
+/* === ENTRY === */
+main {
+    padding: 50px;
+}
+
+.card {
+    /* border: 1px solid black; */
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.card > img {
+    width: 400px;
+}
+
+.content .marker {
+    width: 15px;
+}
+
+.country {
+    margin: 0 10px;
+    letter-spacing: 17%;
+}
+
+.content > a {
+    color: #918E9B;
+    margin: 0 10px;
+}
+
+.content {
+    padding: 70px 50px;
+}
+
+.content h1 {
+    font-size: 2.5rem;
+    margin: 10px 0 40px;
+}
+
+.content .date {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-top: 50px;
+}
+
+.content .description {
+    margin: 0;
+    width: 80%;
+    color: #2b283ad0;
+    line-height: 1.5rem;
 }
