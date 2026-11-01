@@ -12,6 +12,9 @@ export default function App() {
             googleMapsLink={entry.googleMapsLink}
             dates={entry.dates}
             text={entry.text}
+
+            // method 2:
+            // {...entry}
         />
     })
 
