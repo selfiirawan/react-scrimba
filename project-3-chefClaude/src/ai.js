@@ -1,4 +1,4 @@
-import { InferenceClient } from "@huggingface/inference";
+import { GoogleGenAI } from "@google/genai"
 
 const SYSTEM_PROMPT = `
 You are an assistant that receives a list of ingredients that a user has and suggests 
@@ -8,20 +8,17 @@ they didn't mention, but try not to include too many extra ingredients. Format y
 in markdown to make it easier to render to a web page
 `
 
-const hf = new InferenceClient(import.meta.env.VITE_HF_API_KEY)
+const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_GEMINI_API_KEY })
 
 export async function getRecipeFromMistral(ingredientsArr) {
     const ingredientsString = ingredientsArr.join(", ")
     try {
-        const response = await hf.chatCompletion({
-            model: "mistralai/Mixtral-8x7B-Instruct-v0.1",
-            messages: [
-                { role: "system", content: SYSTEM_PROMPT },
-                { role: "user", content: `I have ${ingredientsString}. Please give me a recipe you'd recommend I make!` },
-            ],
-            max_tokens: 1024,
+        const response = await ai.models.generateContent({
+            model: "gemini-3.5-flash",
+            contents: `I have ${ingredientsString}. Please give me a recipe you'd recommend I make!`,
+            config: { systemInstruction: SYSTEM_PROMPT },
         })
-        return response.choices[0].message.content
+        return response.text
     } catch (err) {
         console.error(err.message)
     }
